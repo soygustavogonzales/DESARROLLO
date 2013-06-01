@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href=""/>
+	<script type="text/javascript">
+	//window.onload=function() {
+		var left=-2;
+		var leftX=0;
+		function activeSprite(){
+		left=left-50;
+		leftX=leftX+1;
+		var pacman=document.getElementById("pacman");
+
+		console.log("correcto1: "+pacman.getAttribute("name"));
+		pacman.style.backgroundPosition=left+"px -2px";
+		pacman.style.left=leftX+"px";
+		console.log("se cambio el sprite ,leftX="+leftX );
+		}
+		function activeTime(){
+			setInterval('activeSprite()',100);
+		}
+	//}
+	</script>
+	<style rel="stylesheet" type="text/css">
+	*{border:0;margin: 0;padding: 0;}
+	body{background-color: #000000;}
+
+	#pacman{
+	background-image: url('pacman.png');
+	background-position: -2px -2px;
+	background-repeat: repeat-x;
+	position:absolute;
+	height: 38px;
+	width:38px;
+	border: 2px solid #27CAED;
+	border-radius: 10px;	
+	}
+	</style>
+</head>
+<body>
+	<div id="web">
+		<div id="pacman" name="pacmancito" onclick="ReadySprite()">
+			
+		</div>
+		<input type="submit" id="button" value="Activar Sprite" onclick="activeTime();">
+	</div>
+</body>
+</html>
+

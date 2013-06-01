@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href=""/>
+	<script>
+	/*
+		Con el siguiente script logro obtener el nombre del
+		tipo de objeto al que le paso por argumento.
+
+	*/
+		var objetito={};
+		var numerito=1000;
+		var logico=true;
+		var cadenita='cadenita';
+		var matricita=[];
+		var expresioncita=/a*/;//esta es una expresion regular
+		console.log(
+			Object.prototype.toString.call(objetito)+"\n"+//arroja [object Object] 
+			Object.prototype.toString.call(numerito)+"\n"+//arroja [object Number]
+			Object.prototype.toString.call(logico)+"\n"+//arroja [object Boolean]
+			Object.prototype.toString.call(cadenita)+"\n"+//arroja [object String
+			Object.prototype.toString.call(matricita)+"\n"+//arroja [object Array]
+			Object.prototype.toString.call(expresioncita)//arroja [object RegExp]
+			)
+	</script>
+</head>
+<body>
+	<div id="web"></div>
+</body>
+</html>
+

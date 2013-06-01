@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href=""/>
+	<!--
+	En este ejercicio evaluamos como lanzar errores.
+-->
+	<script>
+		
+		if(document.addEventListener){	
+			console.info("si soporta");
+			try{
+				throw new Error("Si existe el metodo");
+			}catch(e){
+				console.log(e.name+" : "+e.message);
+			}
+		}else{
+			try{
+				throw new Error("No existe el metodo");
+			}catch(e){
+				console.log(e.name+" : "+e.message);
+			}	
+		}
+		var n=0/0;
+		if(isFinite(n)){
+			console.log("si is finite");
+		}else{
+				throw new Error(eval('console.error("OOPPS!!...No es finito...")'));
+			try{
+			
+			}catch(e){
+				console.log(e.name+" : "+e.message);		
+			}
+		}
+		console.log("correcto advantage new error");
+	</script>
+	<style>
+	</style>
+</head>
+	<body>
+		
+	</body>
+</html>
