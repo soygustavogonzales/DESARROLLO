@@ -1,0 +1,31 @@
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com.
+    Modificated by Gustavo Gonzales on January 2013.
+  ---------------------------------------------------*/
+* {
+  border: 0;
+  margin: 0;
+}
+body {
+  background: #434343;
+}
+.textarea1 {
+  background: linear-gradient(30deg, orange, black 40%, green, pink, white);
+}
+.textarea2 {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, white), color-stop(1, blue));
+  background: -ms-linear-gradient(bottom, white, blue);
+  background: -moz-linear-gradient(center bottom, white 0%, blue 100%);
+  background: -o-linear-gradient(blue, white);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='blue', endColorstr='white', GradientType=0);
+}
+.textarea3 {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, black), color-stop(1, green));
+  background: -ms-linear-gradient(bottom, black, green);
+  background: -moz-linear-gradient(center bottom, black 0%, green 100%);
+  background: -o-linear-gradient(green, black);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='green', endColorstr='black', GradientType=0);
+}

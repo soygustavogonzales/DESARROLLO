@@ -1,0 +1,35 @@
+section {
+  margin: 10px;
+  color: #f4f4f2;
+  font-size: 15px;
+}
+section > h3 {
+  font-size: 17px;
+}
+section > h3,
+section > span {
+  display: inline-block;
+  margin: 0 0 10px 0;
+}
+section > article {
+  font-size: 13px;
+  line-height: 15px;
+  /*espacio de interlineado*/
+
+}
+section > article::first-letter {
+  float: left;
+  font-size: 40px;
+  font-family: times;
+}
+section > ul {
+  border-left: 1px dotted #ddddd6;
+  margin: 10px 10px 0 15px;
+  padding: 0 0 0 8px;
+  font-size: 12px;
+}
+section > ul > li {
+  list-style: none;
+}
+
+/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */

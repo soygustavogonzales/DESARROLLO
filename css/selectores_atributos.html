@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+	<!--En este ejercicio trato los selectores hijos , aquellos que solo seleccionan a los hijos y no a los descendientes-->
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin:0;padding: 0;border: 0;}
+		body{
+			
+			background: -webkit-linear-gradient(top,gray,white,gray);
+			background: -moz-linear-gradient(top,gray,white,gray);
+			background: -o-linear-gradient(top,gray,white,gray);
+			background: -ms-linear-gradient(top,gray,white,gray);
+			background:linear-gradient(top,gray,white,gray);
+			color:black;
+			
+			}
+		section[id="section1"] p[name="p2"]{/*selecciono a todos los descendientes p con atributo name="p2" de todos los section con id="section1"*/
+			color:white;
+		}
+		section[id="section1"]>article[class="article1"]>p{/*selecina a todos los p que sean solo hijos del article con atributo class="article1" que sean hijos directos de los section con id="section1"*/
+			color:green;
+		}
+		section>article[role="article2"]>p[id="p5"] em[name="em2"]{/*selecciona a todos los em con atributo name="em2", que sean descendientes de p con atributo name="em2" descendientes de los p con atributo id="p5" que seaa directamente hijos del article con atributo role="article2" que sea hijo de todos los section*/
+			color: blue;
+		}
+	
+
+	</style>
+	<link rel="stylesheet" type="text/css" href=""/>
+	<script type="text/javascript"></script>
+</head>
+<body>
+	<div id="web">
+		<section id="section1">
+			<article class="article1">
+				it is a article
+				<p role="p1">
+					it is a paragraph
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus ducimus error quis.
+				</p>
+				<div id="div1">
+					<p name="p2">
+						 Omnis tenetur maiores saepe natus expedita fugit possimus provident quidem dolore odit.
+					</p>
+				</div>
+
+			</article>
+			<article role="article2">
+				<p name="p3">
+					it is a paragraph.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+					<em id="em1">
+						it is  a emphasis
+						<p role="p4">
+						Ipsam tempora laudantium nam!
+						</p> 
+					</em>
+				</p>
+				<p id="p5">
+					<span class="span1">
+						<em name="em2">
+							it is on emphasis
+						</em>
+					</span>
+					it is a paragraph
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non ut consequuntur dolorum?
+				</p>
+			</article>
+			<div role="divX">
+				it is a div
+				<article>
+					it is a article
+					<p>
+						it is a paragraph
+					</p>
+				</article>
+			</div>
+		</section>
+
+	</div>
+</body>
+</html>
+

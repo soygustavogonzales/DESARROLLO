@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+	<!--En este ejercicio hago pruebas con los selectores de css, aqui hare laas pruebas
+	de descendientes, que seleccionan a los hijos, nietos y cualquier descendiente dentro de
+	la misma rama-->
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href=""/>
+	<style>
+	*{margin: 0;padding: 0;border: 0;}
+	html{color:#ffffff;background: #000;font-family: sans-serif;}
+	section#content-p{/*con esto selecciono al section con id="content-p"*/
+		font-size: 16px;
+		vertical-align: sub;
+	}
+	section#content-p article p  span{/*con esto selecciono a todos los span descendientes de todos los p descendientes del section con id="content-p"*/
+		font-size: 2em;
+		//vertical-align:super;
+		color: gray
+	}
+	section#content-s{
+		border: 1px solid red;
+		font-size: 30px;/*a partir de aqui 1em=30px para el tamaño de la fuente de todos los elementos hijos de este elemento.*/
+	}
+	section#content-s article{/*selecciono a todos los article descendientes del section con id="content-s"*/
+		/*todos los em dentro de este elemento estan en funcion de el tamaño de la fuente de este elemento.*/
+		font-size: .5em;/*es igual a 0.5em=15px*//*en funcion del tamaño de la fuente*/
+		border: 2em solid green;/*es igual a 30px*/
+
+	}
+	section#content-s article p{
+		border: .3em solid blue;/*el 30%,igual a 5px, basandonos en el tamaño de la fuente de este elemento*/
+		font-size: 15px;	
+	}
+	section#content-s article p span{
+		border: .1em solid yellow;/*la decima parte de la fuente de este elemento(), osea 3px*/
+		font-size: 2em;	/*igual a 30px,basandonos en los 15px de la fuente del elemento padre*/
+	}
+
+
+	</style>
+	<script type="text/javascript"></script>
+</head>
+<body>
+	<div id="web">
+		<section id="content-p">
+			<article>
+				<p>
+					<div>
+						<span>
+								<p><span>Lorem <span>ips <span>uopo po <span>po</span>  popo</span>	um </span>dolor.</span></p>
+							<p>
+								<span>Lorem ipsum dolor.</span>
+							</p>
+						</span>
+					</div>
+				</p>
+				<p>
+					Lorem 
+					<span>
+						ipsum
+					</span>
+					 dolor sit amet, consectetur adipisicing elit. Porro sit.
+				</p>
+			</article>
+			<div>
+				<p>
+					Lorem
+					<article>
+						<p>/
+					 		
+					 		<span>
+					 			Lorem ipsum.
+					 			<p>
+					 				<span>
+					 					Lorem ipsum dolor.
+					 				</span>
+					 			</p>
+					 			Lorem ipsum.
+					 		</span>
+					 		<p>
+					 			
+					 			<span>
+					 				ips 
+					 				<em>
+					 					hello
+					 					<span>
+					 						um
+					 					</span>
+					 					soctibum
+					 				</em>
+					 			</span>
+					 			 dolor
+					 		</p>
+					 		<p>
+						 		<span>
+						 			Lorem 
+						 			<span>
+							 			ip 
+							 			<span>
+							 			 s
+							 			</span>	
+							 			um
+						 			</span>  
+						 			dolor
+						 		</span>
+					 		</p>
+					 	</p>
+						<div> sit amet.
+							 	<p>
+							 		<span>
+							 			dolor
+							 		</span>
+							 		 sit 
+							 	</p>
+						 	amet.
+					 	</div>
+					</article>
+				</p>
+			</div>
+		</section>
+		<section id="content-s">
+			it is the section
+			<article>
+				it is the article
+					<p>it is the fisrt pragraph
+						<span>it is the span</span>
+					</p>
+					<p>it is the second pragraph</p>
+			</article>
+			<article></article>
+		</section>
+	</div>
+</body>
+</html>
+

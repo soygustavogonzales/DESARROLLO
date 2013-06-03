@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href=""/>
+	<style>
+
+	@-webkit-keyframes mover{
+		from{
+			left:130px;
+			box-shadow: 1px 2px 0px black,
+						inset 100px 10px 100px black
+						;
+		}
+		to{
+			left: 150px;
+			width: 100px;
+			height: 100px;
+			box-shadow: 55px 55px 50px black,
+						inset 1px 1px 10px black;
+			-webkit-trasform:rotate(360deg);
+
+
+		}
+	}
+	@-moz-keyframes mover{
+		from{
+			left:130px;
+			box-shadow: 1px 2px 0px black,
+						inset 100px 10px 100px black
+						;
+		}
+		to{
+			left: 150px;
+			width: 100px;
+			height: 100px;
+			box-shadow: 55px 55px 50px black,
+			inset 1px 1px 10px black;
+			-moz-trasform:rotate(360deg);
+
+		}
+	}
+		#cajita{
+			-moz-animation-name:mover;
+			-moz-animation-duration:3s;
+			-moz-animation-iteration-count:infinite;
+			-moz-animation-direction:alternate;
+			-webkit-animation-name:mover;
+			-webkit-animation-duration:3s;
+			-webkit-animation-iteration-count:infinite;
+			-webkit-animation-direction:alternate;
+			background: orange;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			position: relative;
+			border-top: 2px solid #434343;
+
+		}
+	</style>
+	<script type="text/javascript"></script>
+</head>
+<body>
+	<div id="web">
+		<article id="cajita">
+			C
+		</article>
+
+	</div>
+</body>
+</html>
+

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+	<!--En este ejercicio trato los selectores hijos , aquellos que solo seleccionan a los hijos y no a los descendientes-->
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin:0;padding: 0;border: 0;}
+		body{
+			
+			background: -webkit-linear-gradient(top,gray,white,gray);
+			background: -moz-linear-gradient(top,gray,white,gray);
+			background: -o-linear-gradient(top,gray,white,gray);
+			background: -ms-linear-gradient(top,gray,white,gray);
+			background:linear-gradient(top,gray,white,gray);
+			color:black;
+			
+			}
+		section>p{
+			color:#200602;
+		}
+		section>article>p{/*selecina a todos los p que sean solo hijos de article que sean solo hijos de section*/
+			color:green;
+		}
+		section>article>p>em{/*selecciona a todos los em solo hijos de los p que sean solo hijos de los article que sean solo hijos de los section*/
+			color: blue;
+		}
+
+	</style>
+	<link rel="stylesheet" type="text/css" href=""/>
+	<script type="text/javascript"></script>
+</head>
+<body>
+	<div id="web">
+		<section id="content-p">
+			<article>
+				it is a article
+				<p>
+					it is a paragraph
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus ducimus error quis.
+				</p>
+				<div>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores ex possimus explicabo!
+					</p>
+				</div>
+
+			</article>
+			<article>
+				<p>
+					it is a paragraph.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+					<em>
+						it is  a emphasis
+						<p>
+						Ipsam tempora laudantium nam!
+						</p> 
+					</em>
+				</p>
+				<p>
+					<span>
+						<em>
+							it is on emphasis
+						</em>
+					</span>
+					it is a paragraph
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non ut consequuntur dolorum?
+				</p>
+			</article>
+			<div>
+				it is a div
+				<article>
+					it is a article
+					<p>
+						it is a paragraph
+					</p>
+				</article>
+			</div>
+		</section>
+
+	</div>
+</body>
+</html>
+

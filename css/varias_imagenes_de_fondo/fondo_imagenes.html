@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href=""/>
+	<style>
+
+		div#web>#cajita1{
+			background: url(fondo2.png) center repeat-x,/*este estara encima de todos*/
+			url(fondo3.png) center repeat,/*este estara al medio*/
+			url(fondo1.gif) bottom repeat;/*este estara al fondo*/
+			background-size: 20%,40%,10%;
+			width: 50%;
+			height: 300px;
+			border: 2px solid black;
+		}
+		div#web>#cajita2{
+			background:
+			url(fondo3.png) center repeat,
+			url(fondo2.png) center repeat,
+			url(fondo1.gif) bottom repeat;
+			background-size: 20%,40%,10%;
+			width: 50%;
+			height: 300px;	
+			border: 2px solid black;
+		}
+		div#web>#cajita3{
+			background:
+			url(fondo1.gif) center repeat-x,
+			url(fondo3.png) center repeat-x,
+			url(fondo2.png) left repeat-y;
+			background-size: 10%,40%,50%;
+			width: 50%;
+			height: 300px;	
+			border: 2px solid black;
+		}
+
+	</style>
+	<script type="text/javascript"></script>
+</head>
+<body>
+	<div id="web">
+		<div id="cajita1">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dicta vero ab voluptas atque nemo vel quibusdam aut amet alias. Quasi optio quam architecto nihil velit nemo maxime distinctio iure.
+		</div>
+		<div id="cajita2">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium quasi.
+		</div>
+		<div id="cajita3">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et molestiae voluptas sapiente.
+		</div>
+	</div>
+</body>
+</html>
+

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href=""/>
+	<style>
+	body{background: #434343;color: #fff;}
+		ul.lista0>li:not(:first-child){/*no cogera al primer elemento li del ul con class=lista0*/
+			background:cyan;
+			}
+		ul.lista1>li:not(:first-child):not(:last-child){/*no cogera al primer li,ni al al ultimo li del ul con class="lista1"*/
+			background: orange;2
+		}
+		ul.lista2>li:not(:nth-child(2n)){/*no cogera los li en el orden par*/
+			background: #B0F583;
+		}
+		
+	</style>
+	<script type="text/javascript"></script>
+</head>
+<body>
+	<div id="web">
+		<ul class="lista0">
+			<li>lista1</li>
+			<li>lista2</li>
+			<li>lista3</li>
+		</ul>
+		<ul class="lista1">
+			<li>li1</li>
+			<li>li2</li>
+			<li>li3</li>
+			<li>li4</li>
+			<li>li5</li>
+			<li>li6</li>
+		</ul>
+		<ul class="lista2">
+			<li>li1</li>
+			<li>li2</li>
+			<li>li3</li>
+			<li>li4</li>
+		</ul>
+	</div>
+</body>
+</html>
+
