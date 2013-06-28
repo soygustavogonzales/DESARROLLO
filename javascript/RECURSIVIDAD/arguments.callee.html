@@ -23,6 +23,19 @@
 		};
 		var result=create()(4);
 		console.log(result);
+		
+		/*
+			*******
+			OTRA FORMA DE HACER EL FACTORIAL
+		*/
+		function factorial(n){
+			if(n>=1){
+				return n*arguments.callee(n-1);
+			}else{
+				return 1;
+			}
+		}
+		console.warn(factorial(4));
 	</script>
 </head>
 <body>

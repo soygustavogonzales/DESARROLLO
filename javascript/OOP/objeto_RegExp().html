@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href=""/>
+	<script>
+/*
+	Aqui se tratara a detalle a las expresiones regulares y al objeto RegExp()
+
+
+	PENDIENTE...
+*/
+	console.group("EJERCICIO DE Regular Expresion")
+
+		var browsers2=["msie","opera","firefox","chrome","safari","opera","firefox"];
+		console.log("JSON.stringify(browsers): "+JSON.stringify(browsers2));
+		var resq2=/(msie)|(firefox)|(chrome)|(opera)|(safari)/ig.exec(JSON.stringify(browsers));
+		console.log("in array: "+JSON.stringify(resq2)+":"+RegExp.lastMatch);
+	
+	console.groupEnd("EJERCICIO DE Regular Expresion")
+
+
+	</script>
+	<style>
+	</style>
+</head>
+	<body>
+		
+	</body>
+</html>

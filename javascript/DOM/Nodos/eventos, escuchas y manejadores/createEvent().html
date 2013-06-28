@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href=""/>
+	<style>
+	#caja{
+		background: #EC6C35;
+		width:400px;
+		height:400px;
+		border-radius: 10px;
+	}
+	</style>
+</head>
+	<body>
+		<div id="caja">soy caja</div>
+	</body>
+	<script>
+
+		var caja=document.getElementById("caja");
+		caja.onclick=function(event){
+			this.dispatchEvent(evento1);//disparo el evento
+			console.log("evento click: "+event);
+		}
+		var evento1=document.createEvent("CustomEvent");
+		evento1.initCustomEvent("myEvento",true,true);
+
+		caja.addEventListener("myEvento",function(e){
+			console.log("evento lanzado"+e+"\n"+
+						"tipo de evento: "+e.type+"\n"+
+						"en el nodo: "+this.tagName
+				);
+
+		},true);
+
+	</script>
+</html>

@@ -32,7 +32,7 @@
 	console.log(typeof(Counter));
 	*/
 
-	var Counter=(function(){
+	var Counter=(function(){//counter es una variable que tomara el valor de lo que retorne la funcion anonima autoejecutable
 		var privateCounter=0;
 		function changeBy(val){
 			privateCounter+=val;
@@ -54,7 +54,7 @@
 	Explicacion:
 	Se declara una variable que automaticamente
 	almacenara un objeto retornado por la
-	la funcion anonima autoejecutable(desde ahora funcion).
+	la funcion anonima autoejecutable(enadelante me referire a ella solo como "funcion").
 	Esta funcion contendra un entorno privado(que no estara disponible
 	o al alcance desde fuera de la misma funcion), que son
 	la variable privateCounter y el metodo changeBy().
@@ -76,7 +76,7 @@
 
 	Notar que los 3 metodos q arroja la funcion anonima
 	tienen disponibilidad publica y solo mediante estos
-	metodos se podra tener acceso a loas atributos del
+	metodos se podra tener acceso a las atributos del
 	entorno privado(la variable privateCounter y al function changeBy)
 	*/
 	console.log(typeof(Counter));//arroja object
