@@ -14,24 +14,40 @@
 	</style>
 </head>
 	<body>
-		<div id="caja">soy caja</div>
+		<div id="caja">hazme click</div>
 	</body>
 	<script>
 
 		var caja=document.getElementById("caja");
-		caja.onclick=function(event){
-			this.dispatchEvent(evento1);//disparo el evento
-			console.log("evento click: "+event);
-		}
 		var evento1=document.createEvent("CustomEvent");
-		evento1.initCustomEvent("myEvento",true,true);
+		/*
+			CustomEvent : Evento personalizado
+			MouseEvent : Evento del mouse
+			KeyboardEvent : Evento del teclado
+
+
+		*/
+		//evento1.initEvent("myEvento",true,true,true);
+		evento1.initCustomEvent("myEvento",true,true,true);//Se da nombre al evento
+		/*
+			en vez de initCustomEvent podria haber sido:
+			
+
+		*/
+		caja.onclick=function(evento){
+			this.dispatchEvent(evento1);//disparo el evento
+			console.log("evento click: "+evento);
+		}
 
 		caja.addEventListener("myEvento",function(e){
-			console.log("evento lanzado"+e+"\n"+
-						"tipo de evento: "+e.type+"\n"+
-						"en el nodo: "+this.tagName
-				);
-
+			//this hace referencia al nodo que tiene el escucha del evento myEvento
+			console.log(e);
+			console.log(typeof e);
+			console.log("e: "+e+"\n"+
+						"e.type: "+e.type+"\n"+
+						"this.tagName: "+this.tagName+"\n"+
+						"e.srcElement.tagName : "+((e.srcElement)?e.srcElement.tagName:undefined)//En Firefox aun no esta definido el atributo srcElement
+			);
 		},true);
 
 	</script>

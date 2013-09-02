@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html lang="es-PE">
 <head>
 	<!--
@@ -19,16 +19,45 @@
 	<script>
 	window.addEventListener("load",function(){//espero que se cargue el dom de la pagina
 		var elemento=document.getElementById("elemento");//selecciono el nodo con id=elemento
-		console.log("elemento.dataset.name : "+elemento.dataset.name);//arrojaria gustavo
-		console.log("elemento.dataset.age : "+elemento.dataset.age);//arrojaria 22
-		console.log("elemento.dataset.dateOfBorn : "+elemento.dataset.dateOfBorn);//arrojaria "31/07/1990"
-		elemento.dataset.dateOfBorn="1990/07/31";//le cambio el valor del atributo data-date-of-born="31/07/1990"
-		console.log("elemento.dataset.dateOfBorn : "+elemento.dataset.dateOfBorn);//arrojaria "1990/07/31"
-		console.log("other in elemento.dataset : "+('other' in elemento.dataset));//arrojaria true
-		elemento.dataset.atributo1="value1";//le creo un data atribute llamado otroData, se verifica que al observar el dom(por consola) del documento si que se ha incluido este nuevo data atribute
-		elemento.setAttribute("data-atributo2","value2");
-		console.log("atributo1 in elemento.dataset : "+('atributo1' in elemento.dataset));
-		console.log("atributo2 in elemento.dataset : "+('atributo2' in elemento.dataset));
+		console.group('Obteniendo algunos data atributes');
+			console.log(
+					"elemento.dataset.name : "+elemento.dataset.name+"\n"+//arrojaria gustavo
+					"elemento.dataset.age : "+elemento.dataset.age+"\n"+//arrojaria 22
+					"elemento.dataset.dateOfBorn : "+elemento.dataset.dateOfBorns//arrojaria "31/07/1990"
+			)
+		console.groupEnd('Obteniendo algunos data atributes');
+		
+		console.group('Obteniendo un data-atribute luego se ser modificado');
+			elemento.dataset.dateOfBorn="1990/07/31";//le cambio el valor del atributo data-date-of-born="31/07/1990"
+			/*Borrando un data-atribute*/
+			console.log(
+					"elemento.dataset.dateOfBorn : "+elemento.dataset.dateOfBorn+"\n"+//arrojaria "1990/07/31"
+					"other in elemento.dataset : "+('other' in elemento.dataset)//arrojaria true
+			);
+
+		console.groupEnd('Obteniendo un data-atribute luego se ser modificado');
+
+		console.group('Borrando un data-atribute');
+			elemento.dataset.ocupation=undefined;//Asi no se borra, aqui estamos asignando como undefined al data-atributo, seguira apareciendo en el DOM del documento
+			console.log("ocupation in elemento.dataset : "+('ocupation' in elemento.dataset)+" = "+elemento.dataset.ocupation);//arroja true
+			elemento.removeAttribute("data-ocupation");//Aqui si se borra, es la unica forma que encontre de hacerlo
+			console.log(
+						"ocupation in elemento.dataset : "+('ocupation' in elemento.dataset)+" = "+elemento.dataset.ocupation+"\n"+//arroja false
+						"elemento.dataset.ocupation==undefined : "+(elemento.dataset.ocupation==undefined)+"\n"+
+						"elemento.dataset.ocupation===undefined : "+(elemento.dataset.ocupation===undefined)
+			)
+		console.groupEnd('Borrando un data-atribute');
+
+		console.group('Obteniendo data-atribute creados con javascript');
+			elemento.dataset.atributo1="value1";//le creo un data atribute llamado otroData, se verifica que al observar el dom(por consola) del documento si que se ha incluido este nuevo data atribute
+			elemento.setAttribute("data-atributo2","value2");
+			elemento.setAttribute("ASDASD","asdasd");
+			console.log(
+				
+				"atributo1 in elemento.dataset : "+('atributo1' in elemento.dataset)+" = "+elemento.dataset.atributo1+"\n"+
+				"atributo2 in elemento.dataset : "+('atributo2' in elemento.dataset)+" = "+elemento.dataset.atributo2
+			);
+		console.groupEnd('Obteniendo data-atribute creados con javascript');
 
 
 	},false);

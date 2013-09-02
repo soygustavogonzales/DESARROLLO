@@ -30,14 +30,20 @@
 			console.log('hello '+a);
 		})('gustavo');
 
-		var metodo2=(function(a){
+		var metodo2=(function(a){//cuando en una funcion no se especifica un return, esta devolvera undefined
 			console.log('bye '+a);
 			//console.log(typeof(metodo2));
 		})('omar');
 			//metodo2();//arroja error pues metodo2 no es una funcion
 			console.log("correcto");
 			console.log(typeof(metodo2));//arroja undefined
-
+			/*Otra forma de escribir una funcion autoejecutable*/
+		!function(msj){/*se antepone el ! */
+			console.log("mensaje: "+msj+" bar");	/*arroja "mensaje: foo bar"*/
+		}("foo ")
+		(function(msj){
+			console.log("mensaje: "+msj+" bar");	/*arroja "mensaje: foo bar"*/
+		})("foo ")
 	</script>
 	<style>
 	</style>

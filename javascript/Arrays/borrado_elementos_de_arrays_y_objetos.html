@@ -23,7 +23,19 @@ NOTACION:
 	var objeto={atrib1_:'atrib1',atrib2_:'atrib2',metodo1:function(){return 'call to metodo1'}}//
 	delete objeto.atrib1_
 	console.log(objeto.atrib1_);//arroja undefined
-	
+NOTA: (delete objeto.atrib1_) es diferente de objeto.atrib1_=undefined
+para comprobar la premisa debuggear lo siguiente:
+(delete(objeto.atrib1_)==(objeto.atrib1_=undefined))?true:false;//esto arroja false;
+Una aplicacion de este ejemplo es cuando trabajamos con los atributos de un objeto seteados mediante 
+el prototipo de su clase padre.
+var clsPadre=function(){};
+clsPadre.prototype={
+	name_:"gustavito",
+}
+var oHijo1=new clsPadre();
+console.log(oHijo1.name_);//arrojaria "gustavito"
+delete(oHijo1.name_);//solo elimina el valor del atributo si se instancia, no borra el valor del prototipado
+console.log(oHijo1.name_);//arrojaria "gustavito"
 
 -->
 	<meta charset="UTF-8">

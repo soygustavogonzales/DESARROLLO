@@ -38,7 +38,7 @@ function informacion(elEvento) {
           coordenadaXabsoluta = evento.clientX + document.documentElement.scrollLeft;
           coordenadaYabsoluta = evento.clientY + document.documentElement.scrollTop;
         }
-        else { 
+        else {
           coordenadaXabsoluta = evento.clientX + document.body.scrollLeft;
           coordenadaYabsoluta = evento.clientY + document.body.scrollTop;
         }
@@ -46,6 +46,7 @@ function informacion(elEvento) {
       else {
         coordenadaXabsoluta = evento.pageX;
         coordenadaYabsoluta = evento.pageY;
+         
       }
       coordenadaXrelativa = evento.clientX;
       coordenadaYrelativa = evento.clientY;

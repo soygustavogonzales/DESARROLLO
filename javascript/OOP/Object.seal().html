@@ -38,7 +38,7 @@
 			*/
 			Object.seal(oPersona);//al objeto no se le podran agregar nuevos atributos, no sera extensible.}
 			oPersona.telefono="987846541";
-			console.log("oPersona.telefono: "+oPersona.telefono);
+			console.log("oPersona.telefono: "+oPersona.telefono);//arroja undefined
 			console.log(DescriptorProperties.call(oPersona));
 			/*Se analiza que luego de ejecutar el metodo Object.seal() sobre el objeto oPersona 
 				las propiedades de los atributos del objeto oPersona cambian como sigue:
@@ -49,12 +49,12 @@
 				value:'no cambia'
 
 			*/
-			console.log("delete oPersona.name : "+(delete oPersona.name));
+			//console.log("delete oPersona.name : "+(delete oPersona.name));
 			//oPersona.lastname=undefined;
 			
 			console.log(
 				"oPersona.lastname :"+oPersona.lastname+"\n"+
-				"oPersona.name : "+oPersona.name
+				"oPersona.age : "+oPersona.age
 			);
 		</script>
 	</head>

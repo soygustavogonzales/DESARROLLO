@@ -16,7 +16,8 @@
 				mensaje="keycode: "+keycode+
 				"\n;charcode: "+charcode+
 				"\n;caracter pulsado: "+String.fromCharCode(charcode)+//imprimo el valor de la tecla pulsada
-				"\n;en el evento: "+evento.type;//imprimo el nombre del evento. o bien keypress o bien keydown
+				"\n;en el evento tipo: "+evento.type+//imprimo el nombre del evento. o bien keypress o bien keydown
+				"\n;evento(familia): "+evento;
 			if(evento.altKey){mensaje=mensaje+";pulsaste tecla ALT"}
 			else if(evento.ctrlKey){mensaje=mensaje+";pulsaste tecla CTRL"}
 			else if(evento.shiftKey){mensaje=mensaje+";pulsaste tecla SHIFT"}
@@ -27,21 +28,21 @@
 		console.log("--------------------------------------")
 
 	}
-		function EscucharBody(){
+		function EscucharBody(e){
 			var body=document.getElementsByTagName('body')[0];
 			body.onunload=aviso;//antes de abandonar la pagina, esto seria <igual a> body.addEventListener("onunload",aviso,false) 
 			body.onkeypress=aviso;//cuando se presiona la tecla
 			body.onkeydown=aviso;//cuando se presiona pero aun no se levanta la tecla
-			console.log("correcto1");//imprime en consola
+			console.log("tipo de evento: "+e.type);//imprime en consola
 		}
-		window.onload=function(){
-			EscucharBody();
-		}
+		window.addEventListener('load',function(e){
+			EscucharBody(e);
+		},true);
 	</script>
 	<style>
 		body{background: #000;color:#fff}
 		#caja{width:100px;height: auto;background: #62BD24;
-			word-wrap:break-word;}//esta propiedad hara que las palabras largas que no quepan en un elemento se partan en funcion al ancho del elemento(div,li,p,etc) que los contenga
+			word-wrap:break-word;}/*esta propiedad hara que las palabras largas que no quepan en un elemento se partan en funcion al ancho del elemento(div,li,p,etc) que los contenga*/
 	</style>
 </head>
 <body id="body_id" class="body_class" name="body_name">
