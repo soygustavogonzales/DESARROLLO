@@ -1,6 +1,6 @@
 var http=require('http');
 var sa=require('fs');
-var ruta=require('path');
+var ruta=require('path');\
 function ejecutar(){
 	function onRequest(req,res){
 		console.log('peticion');

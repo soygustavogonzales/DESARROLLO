@@ -1,0 +1,117 @@
+@import "reset.css";
+#web {
+  width: 90%;
+  height: 600px;
+  background: peru;
+}
+.circulo {
+  width: 100px;
+  height: 100px;
+  background: transparent;
+  border-radius: 50%;
+  border: 15px solid green;
+  border-right: 15px solid black;
+  border-bottom: 15px solid white;
+  border-left: 15px solid blue;
+  position: relative;
+  -moz-animation-name: mover;
+  -moz-animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-direction: alternate;
+  -webkit-animation-name: mover;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-name: mover;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@-webkit-keyframes mover {
+  0% {
+    top: 340px;
+    left: 450px;
+    box-shadow: 2em 2em 1px black
+  						2em 2em 1px peru;
+    width: 20px;
+    height: 20px;
+  }
+  10% {
+    top: 300px;
+    left: 470px;
+  }
+  20% {
+    top: 260px;
+    left: 500px;
+  }
+  30% {
+    top: 220px;
+    left: 470px;
+  }
+  40% {
+    top: 180px;
+    left: 350px;
+  }
+  90% {
+    top: 350px;
+    left: 100px;
+  }
+  100% {
+    top: 400px;
+    left: 150px;
+    -webkit-transform: skew(130deg, 20deg);
+    -moz-transform: skew(130deg, 20deg);
+    -o-transform: skew(130deg, 20deg);
+    transform: skew(130deg, 20deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+    box-shadow: 5em 5em 5em black,
+  			4em 4em 4px peru;
+  }
+}
+@-moz-keyframes mover {
+  0% {
+    top: 340px;
+    left: 450px;
+    box-shadow: 2em 2em 1px black
+  						2em 2em 1px peru;
+    width: 20px;
+    height: 20px;
+  }
+  10% {
+    top: 300px;
+    left: 470px;
+  }
+  20% {
+    top: 260px;
+    left: 500px;
+  }
+  30% {
+    top: 220px;
+    left: 470px;
+  }
+  40% {
+    top: 180px;
+    left: 350px;
+  }
+  90% {
+    top: 350px;
+    left: 100px;
+  }
+  100% {
+    top: 400px;
+    left: 150px;
+    -webkit-transform: skew(130deg, 20deg);
+    -moz-transform: skew(130deg, 20deg);
+    -o-transform: skew(130deg, 20deg);
+    transform: skew(130deg, 20deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+    box-shadow: 5em 5em 5em black,
+  			4em 4em 4px peru;
+  }
+}

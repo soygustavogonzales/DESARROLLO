@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href=""/>
+	<style>
+	/******RESET*/
+	article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+audio:not([controls]) {
+  display: none;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+
+a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+a:hover,
+a:active {
+  outline: 0;
+}
+
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  width: auto\9;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+#map_canvas img,
+.google-maps img {
+  max-width: none;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+button,
+input {
+  *overflow: visible;
+  line-height: normal;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+label,
+select,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="radio"],
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+input[type="search"] {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+  -webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+@media print {
+  * {
+    color: #000 !important;
+    text-shadow: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  @page  {
+    margin: 0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+	/************/
+	*{
+		margin: 0;
+		border: 0;
+		padding: 0;
+		-moz-box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+		-o-box-sizing:border-box;
+		box-sizing:border-box;
+		word-wrap:word-break;
+	}
+	a{
+		color: inherit;
+		text-decoration: inherit;
+		height: inherit;
+	}
+	#web{
+		width: 90%;
+		min-height: 860px;
+		background: #EEE;
+		margin: 0 auto;
+		color: #EA5848;
+	}
+		nav{
+			width: 100%;
+			background: #EA5848;
+			height: 70px;
+
+		}
+		nav ul{
+			height: 100%;
+			width: 100%;
+			display: inline-block;
+
+		}
+		nav ul li{
+			height: 70px;
+			display: inline-block;
+			vertical-align: middle !important;
+			padding: 35px 0 35px 0;
+		}
+		nav ul li a{
+			/*padding: 35px 0 35px 0;*/
+			height: 100% !important;
+			background: #F5F5F5;
+		}
+		nav ul li a div{
+			padding: 35px 0 35px 0;
+			height: 100% !important;
+			background: #F5F5F5;
+			border:2px solid yellow;
+		}
+		li>div{
+			color: green;
+			height: 100%;
+			background: black;
+			font-size: 20px;
+			font-weight: 900;
+			border:2px solid yellow;
+		}
+		ul>div{
+			display: inline-block;
+			color: blue;
+			height: 100% !important;
+			background-color: black;
+			font-size: 50px;
+			font-weight: 900;	
+		}
+	</style>
+</head>
+<body>
+	<div id="web">
+		<nav class="nav">
+			<ul>
+				<li><a href="#">item01</a></li>
+				<li><a href="#">item02</a></li>
+				<li><a href="#">item03</a></li>
+				<li><a href="#">item04</a></li>
+				<li><a href="#"><div>item05</div></a></li>
+				<li><div>item06 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia eos.</div></li>
+				<div>item08</div>
+			</ul>
+		</nav>
+
+	</div>
+</body>
+</html>
+

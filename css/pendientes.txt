@@ -1,0 +1,9 @@
+clear : both;
+min-height:;
+overflow:;
+outiline:;
+vertical-align:;
+page-break-inside: avoid;
+display: table-header-group;
+page-break-after: avoid;//para impresiones tipo de medio
+clip:

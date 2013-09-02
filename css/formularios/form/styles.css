@@ -1,0 +1,250 @@
+/*legend {
+	display:none;
+}
+*/
+/* --
+CSS Reseter
+CSSLab © 2010 by Jorge Epuñan
+http://www.csslab.cl/2010/06/01/css-reseter-v2/
+-- */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+dialog,
+figure,
+header,
+footer,
+hgroup,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+}
+article,
+aside,
+nav,
+section,
+dialog,
+figure,
+header,
+footer,
+hgroup {
+  display: block;
+}
+/*legend {
+	display:none;
+}
+*/
+:focus {
+  outline: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+}
+a img,
+iframe {
+  border: none;
+}
+ul {
+  list-style: none;
+}
+input,
+textarea,
+select,
+button {
+  font-size: 100%;
+  font-family: inherit;
+}
+input,
+select {
+  vertical-align: middle;
+}
+select {
+  margin: inherit;
+}
+button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+/* Fixes incorrect placement of numbers in ol's in IE6/7 */
+ol {
+  margin-left: 2em;
+}
+/* ========================================= clearfix == */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  display: inline-block;
+}
+* html .clearfix {
+  height: 1%;
+}
+.clearfix {
+  display: block;
+}
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+/*-------------END RESETER---------*/
+body {
+  font-size: 17.6px;
+  font-family: Verdana;
+  background: peru;
+}
+#web {
+  margin: 0 auto;
+  width: 90%;
+  background: #E9E9E9;
+}
+fieldset {
+  margin: 0 auto;
+  width: 70%;
+  max-width: 480px;
+  border: 2px solid #434343;
+  border-radius: 8px;
+}
+fieldset legend {
+  margin: 0 50px;
+  background: white;
+}
+fieldset form {
+  padding: 15px;
+}
+fieldset form p {
+  width: 100%;
+  display: block;
+  padding: 10px;
+  box-sizing: border-box;
+}
+label {
+  vertical-align: sub;
+}
+input {
+  border: solid gray;
+  width: 60%;
+  border-radius: 3.2px;
+  height: 32px;
+  float: right;
+  padding: 0 8px;
+  box-sizing: border-box;
+  min-width: 100px;
+}
+input:hover,
+input:focus {
+  border: 1px solid gray;
+}
+textarea {
+  border: 2px solid gray;
+  width: 100%;
+  height: 128px;
+  max-width: 100%;
+  max-height: 160px;
+  box-sizing: border-box;
+}
+textarea:hover,
+textarea:focus {
+  border: 1px solid gray;
+}
+@media only screen and (max-width: 480px) {
+  body {
+    background: #F88969;
+  }
+  input {
+    width: 100%;
+  }
+  textarea {
+    margin-top: 10px;
+    background: #ffffff;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjM5JSIgc3RvcC1jb2xvcj0iI2VkZWRlZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+    background: -moz-linear-gradient(left, #ffffff 0%, #ededed 39%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #ffffff), color-stop(39%, #ededed));
+    background: -webkit-linear-gradient(left, #ffffff 0%, #ededed 39%);
+    background: -o-linear-gradient(left, #ffffff 0%, #ededed 39%);
+    background: -ms-linear-gradient(left, #ffffff 0%, #ededed 39%);
+    background: linear-gradient(to right, #ffffff 0%, #ededed 39%);
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed', GradientType=1);
+  }
+}

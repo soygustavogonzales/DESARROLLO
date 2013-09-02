@@ -1,0 +1,34 @@
+@color-p:#F4F4F2;
+@color-p-plus:darken(@color-p,10%);
+@color-p-:lighten(@color-p,10%);
+@tamano-letra-p:15px;
+section{
+	margin: 10px;
+	color:@color-p;
+	font-size: @tamano-letra-p;
+	&>h3{
+		font-size: @tamano-letra-p+2;
+	}
+	>h3,>span{
+		display: inline-block;
+		margin: 0 0 10px 0;
+	}
+	&>article{
+		font-size: @tamano-letra-p - 2;
+		line-height:15px;/*espacio de interlineado*/
+		&::first-letter{
+			float:left;
+			font-size:40px;
+			font-family:times;
+		}
+	}
+	&>ul{
+		border-left: 1px dotted @color-p-plus;
+		margin: 10px 10px 0 15px;
+		padding: 0 0 0 8px;
+		font-size: @tamano-letra-p - 3;
+		&>li{
+			list-style: none;
+		}
+	}
+}

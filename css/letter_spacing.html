@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title></title>
+		<script></script>
+<style>
+/*
+Esta propiedad formatea
+los estilos de la distancia entre caracteres
+
+*/
+	*{
+		margin: 0;
+		border:0;
+		padding: 0;
+	}
+	body{
+		font-size: 20px;
+		font-family: Verdana;
+		color: #272822;
+	}
+	div{
+		width: 300px;
+		background: #DADBD5;
+		margin: 10px;
+	}
+	.lt-pequeno{
+		letter-spacing: 2px;
+	}
+	.lt-mediano{
+		letter-spacing: 18px;
+	}
+	.lt-grande{
+		letter-spacing: 50px;
+	}
+	.lt-relativo{/*depende del tamaño del texto, q tenga actualmente*/
+		font-size: 18px;
+		letter-spacing: 5em;/*el em hace la magia*/
+	}
+
+</style>
+		<title>UNknown</title>
+	</head>
+	<body>
+		
+		<div class="lt-pequeno">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, quaerat, illum exercitationem aspernatur impedit earum nesciunt quod fuga reprehenderit sed nihil delectus dolore veniam maiores iste. Illum, delectus odio quae.
+		</div>
+		<div class="lt-mediano">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, quaerat, illum exercitationem aspernatur impedit earum nesciunt quod fuga reprehenderit sed nihil delectus dolore veniam maiores iste. Illum, delectus odio quae.
+		</div>
+		<div class="lt-grande">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, quaerat, illum exercitationem aspernatur impedit earum nesciunt quod fuga reprehenderit sed nihil delectus dolore veniam maiores iste. Illum, delectus odio quae.
+		</div>
+		<div class="lt-relativo">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, quaerat, illum exercitationem aspernatur impedit earum nesciunt quod fuga reprehenderit sed nihil delectus dolore veniam maiores iste. Illum, delectus odio quae.
+		</div>
+	</body>
+</html>

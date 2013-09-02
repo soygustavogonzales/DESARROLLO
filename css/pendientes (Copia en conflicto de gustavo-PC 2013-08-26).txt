@@ -1,0 +1,33 @@
+.class:after{
+	content:"";
+}
+.class:before{
+	content:"";
+}
+.class{
+	font:0/0 a;
+	min-height:30px;
+ 	outline: thin dotted #333;
+ 	outline: 5px auto -webkit-focus-ring-color;
+  	outline-offset: -2px;
+  	vertical-align: baseline;
+	line-height:0;
+	*zoom:1;
+  	width: auto\9;
+  	-ms-interpolation-mode: bicubic;
+    page-break-after: avoid;
+  text-rendering: optimizelegibility;
+  text-transform: uppercase;
+  white-space: pre;//pre-wrap
+
+
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}

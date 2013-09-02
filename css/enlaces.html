@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href=""/>
+	<style>
+	/*
+Estilos en pseudoclases(estados del elemento) del elemento a,
+NOTA:Algunos efectos no son compartidos por igual en todos los navegadores,
+esta vez la excepcion fue Chorme y Safari.
+	*/
+	*{
+		text-decoration: none;
+		padding: 0;
+		border:0;
+		margin: 0;
+	}
+	body{
+		font-size: 16px;
+		font-family: Verdana, arial, 'san-serif';
+	}
+	ul>li{	
+		text-decoration: none;
+		display: inline-block;
+	}
+		a {
+			color:rgba(255,255,255,1);
+			background: rgba(171,171,158,.5);
+			padding:5px 8px;
+		}
+		a:visited{/*estilos cuando un enlace ya fue clickeado*/
+			color: white;
+			/*background: red;*/
+		}
+		a:focus{/*estilos cuando el elemento tiene el focus, fue clickeado. No funciona bien en Chrome ni en Safari*/
+			background: #59665A !important;
+		}
+		a:active{/*estilos cuando se dispara el evento keypress, se pierde cuando se dispara el keyup*/
+			color: black;
+			/*background: cyan;*/
+		}
+		
+		a:hover{/*estilos con el evento mousein, se pierde con el evento mouseout*/
+			background: rgba(171,171,158,1);
+		}
+	</style>
+	<script></script>
+</head>
+<body>
+	<div id="web">
+		<ul class="lista">
+			<li><a href="#">link1</a></li>
+			<li><a href="#">link2</a></li>
+			<li><a href="#">link3</a></li>
+			<li><a href="#">link4</a></li>
+			<li><a href="#">link5</a></li>
+		</ul>
+
+	</div>
+</body>
+</html>
+

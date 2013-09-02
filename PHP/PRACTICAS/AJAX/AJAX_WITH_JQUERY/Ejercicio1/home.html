@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+	<!--
+	Este ejemplo de ajax se hizo con jquery.
+	El objetivo es que cargue, sin necesidad de recargar la pagina, un documento de php(externo).
+-->
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href=""/>
+	<style>
+		.html{
+			width: 500px;
+			height: 500px;
+			overflow-y: scroll;
+			border: 2px solid #B6B8AB;
+			border-radius: 10px;
+		}
+		span[class="msj"]/*<igual q> span.msj*/
+		{
+			font-size: 14px;
+			font-weight: 500;
+			font-style: italic;
+			color: red;
+			visibility: hidden;
+		}
+
+	</style>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>window.jQuery||document.write('<script src="../cdn_jquery/jquery-1.9.1.min.js"><\/script>')</script>
+	
+	<script>
+
+		$(document).on("ready",function(){
+			console.log("DOM CARGADO");
+			$('a.link').on("click",function(evento){
+				evento.preventDefault();
+				console.log("hiciste click");
+				$('.msj').css('visibility','visible');
+				$('.contenido').load("contenido.php",function(){
+					$('.msj').css('visibility','hidden');
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="web">
+		<div class="contenido">
+			<span class="msj">cargando...</span>
+		</div>
+		<a class="link" href="#">Cargar contenido de contenido.php</a>
+	</div>
+</body>
+</html>
+

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+	<!--
+	Al momento de seleccionar texto en una web, me molesta el color predeterminado q le pone el navegador al texto seleccionado(azul mayormente)
+	con el css se puede cambiar ese color para que se identifiq mas con los colores de la web
+	*NOTA:Algunso browser no lo identifican bien
+-->
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href=""/>
+	<style>
+	body{
+		background: #F9A99D;
+	}
+	section#texto1{
+		position:relative;
+		width: 80%;
+		height: auto;
+		background: #FEE189;
+	}
+	/*al mo0mento de seleccionar texto le doy un color distinto del que le pone el navegador, asi es mas identificado con los colores de la web*/
+	section#texto1::-moz-selection{/*para mozzila*/
+		background: #F1824B;/*si ponemos transparent podriamos dificultar que el usuario copie el texto*/
+	}
+	section#texto1::selection{
+		background: #F1824B;/*si ponemos transparent podriamos dificultar que el usuario copie el texto*/
+	}
+	section#texto2{
+		width: 80%;
+		background: peru;
+		cursor: default;
+	}
+	section#texto2::-moz-selection{
+		/*color: currentColor;/*currentColor para q se camufle con su color de fondo*/
+		background: transparent;
+	}
+	section#texto2::selection{
+		/*color: currentColor;/*currentColor para q se camufle con su color de fondo*/
+		background: transparent;
+	}
+	section#texto3{
+		width: 80%;
+		background:rgba(255,255,255,0.6);/*blanco semi transparente*/
+	}
+	/*la siguiente forma hara que no se pueda seleccionar el texto, tecnica mediante css, no funciona en Opera ni en IE<10*/
+	section#texto3{
+		-webkit-user-select:none;
+		-moz-user-select:none;
+		-ms-user-select:none;
+		-o-user-select:none;
+		-khtml-user-select:none;
+	}
+	section#texto4{
+		z-index: 1;
+		width: 80%;
+		background:#D9F99D;
+		cursor: default;
+	}
+	section#texto4::-moz-selection{
+		color: currentColor;
+		background: transparent;
+	}
+	section#texto4::selection{
+		color: currentColor;
+		background: transparent;
+	}
+	
+
+	
+
+	</style>
+	<script type="text/javascript"></script>
+</head>
+<!--
+
+ onselectstart="return false" ondragstart="return false"
+
+ -->
+<body>
+	<div id="web">
+		<section id="texto1">
+			Lorem ipsum dolor sit amet, consectetur 
+		</section>
+		<section id="texto2">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa iste esse officia placeat voluptates tempore.
+		</section>
+
+		<section id="texto3">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores provident.
+		</section>
+		<section id="texto4">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum officiis atque omnis tempore incidunt facere!
+		</section>
+		
+
+
+	</div>
+</body>
+</html>
+

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href=""/>
+	<style>
+	body{background: #000;color: #434343;text-shadow:1px 1px white;}
+	#web{
+		background: cyan;
+	}
+	/*
+		div:not(.div3){
+			background: orange;
+			margin: 12px;
+			width: 100px;
+			height: 100px;
+		}
+	*/
+		div#web>li:last-child{
+			border: 3px dotted red;
+			background: peru;
+		}
+		section>div:first-child{
+			border: 3px dotted green;
+			background: orange;
+		}
+
+	</style>
+	<script type="text/javascript"></script>
+</head>
+<body>
+	<div id="web">
+		<li>li1</li>
+		<li>li2</li>
+		<li>li3</li>
+		<li>li4</li>
+	</div>
+	<section id="content">
+		<div>div1</div>
+		<div>div2</div>
+		<div>div3</div>
+		<div>div4</div>
+		<div>div5</div>
+		<div>div6</div>
+	</section>
+</body>
+
+</html>

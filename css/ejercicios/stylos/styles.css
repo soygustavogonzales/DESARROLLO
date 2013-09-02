@@ -1,0 +1,340 @@
+/*CSS Reseter
+CSSLab © 2010 by Jorge Epuñan
+http://www.csslab.cl/2010/06/01/css-reseter-v2/
+-- */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+dialog,
+figure,
+header,
+footer,
+hgroup,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  text-decoration: none;
+}
+article,
+aside,
+nav,
+section,
+dialog,
+figure,
+header,
+footer,
+hgroup {
+  display: block;
+}
+legend {
+  display: none;
+}
+:focus {
+  outline: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+}
+a img,
+iframe {
+  border: none;
+}
+ul {
+  list-style: none;
+}
+a {
+  /*text-decoration: inherit;*/
+  color: inherit;
+}
+input,
+textarea,
+select,
+button {
+  font-size: 100%;
+  font-family: inherit;
+}
+input,
+select {
+  vertical-align: middle;
+}
+select {
+  margin: inherit;
+}
+button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+/* Fixes incorrect placement of numbers in ol's in IE6/7 */
+
+ol {
+  margin-left: 2em;
+}
+/* ========================================= clearfix == */
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  display: inline-block;
+}
+* html .clearfix {
+  height: 1%;
+}
+.clearfix {
+  display: block;
+}
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com.
+    Modificated by Gustavo Gonzales on January 2013.
+  ---------------------------------------------------*/
+/*color principal que identifica a la web, verde limon*/
+/*el color principal oscurecido un porcentage*/
+/*el color de la letra, blanco casi gris*/
+/*el nombre que le doy a la fuente1*/
+/*el nombre que le doy a la fuente2*/
+/*el nombre que le doy a la fuente de los iconos*/
+@font-face {
+  font-family: NS;
+  src: url('../fonts/NewsCycle-Regular.eot');
+  src: url('../fonts/NewsCycle-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/NewsCycle-Regular.woff') format('woff'), url('../fonts/NewsCycle-Regular.ttf') format('truetype'), url('../fonts/NewsCycle-Regular.svg#NewsCycle-Regular') format('svg');
+  
+  font-weight: 700;
+  font-style: bold;
+}
+@font-face {
+  font-family: YK;
+  src: url('../fonts/YanoneKaffeesatz-Regular.eot');
+  src: url('../fonts/YanoneKaffeesatz-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/YanoneKaffeesatz-Regular.woff') format('woff'), url('../fonts/YanoneKaffeesatz-Regular.ttf') format('truetype'), url('../fonts/YanoneKaffeesatz-Regular.svg#YanoneKaffeesatz-Regular') format('svg');
+  
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Iconos;
+  src: url('../fonts/fontsAwesome/fontawesome-webfont.eot');
+  src: url('../fonts/fontsAwesome/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/fontsAwesome/fontawesome-webfont.woff') format('woff'), url('../fonts/fontsAwesome/fontawesome-webfont.ttf') format('truetype'), url('../fonts/fontsAwesome/fontawesome-webfont.svg#fontawesome-webfont') format('svg');
+  
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  word-break: word-wrap;
+}
+body {
+  background: rgba(233, 233, 235, 0.6);
+  font-family: 'Verdana', sans-serif;
+  font-weight: 700;
+  color: #e8e9e4;
+}
+#web {
+  background: rgba(233, 233, 235, 0.8);
+  max-width: 95%;
+  min-width: 320px;
+  margin: 0 auto;
+  min-height: 800px;
+}
+#menu {
+  height: 60px;
+  max-width: 100%;
+  max-height: 60px;
+  background: rgba(0, 165, 0, 0.9);
+}
+#menu .logo {
+  max-width: 20%;
+  min-width: 191px;
+  margin-left: 8%;
+  font-family: NS;
+  display: inline-block;
+  font-size: 28px;
+  padding: 0 0 10px 0;
+}
+#menu .logo i {
+  margin: 0 5px 0 5px;
+  font-size: 1em;
+}
+#menu .nav {
+  height: 60px;
+  max-width: 70%;
+  min-width: 642px;
+  font-size: 20px;
+  font-family: YK;
+  display: inline-block;
+}
+#menu .nav ul {
+  height: 60px;
+  position: relative;
+  display: inline-block;
+}
+#menu .nav ul .active {
+  background: #e8e9e4;
+  color: rgba(0, 170, 0, 0.9);
+}
+#menu .nav ul li {
+  height: 160px;
+  background: transparent;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+#menu .nav ul li a {
+  height: 160px !important;
+}
+#menu .nav ul li:hover > a {
+  /*el & representa al elemento que lo contiene, es como this es programacion*/
+  background: #e8e9e4;
+  color: rgba(0, 145, 0, 0.9);
+}
+#menu .nav ul li:hover > .submenu {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: inline;
+  visibility: visible;
+  background: rgba(0, 145, 0, 0.9);
+}
+#menu .nav ul li .submenu {
+  display: none;
+  visibility: hidden;
+  z-index: 2;
+}
+#menu .nav ul li .sub3 {
+  position: absolute;
+  margin: -60px 0 0 90px;
+}
+@media (min-width: 680px) and (max-width: 960px) {
+  #menu .nav {
+    color: rgba(0, 170, 0, 0.9);
+    max-width: 100%;
+    min-width: 642px;
+    font-size: 20px;
+    font-family: YK;
+    display: inline-block;
+  }
+  #menu .nav ul {
+    position: relative;
+    display: inline-block;
+  }
+  #menu .nav ul .active {
+    background: rgba(0, 170, 0, 0.9);
+    color: #e8e9e4;
+  }
+  #menu .nav ul li {
+    background: transparent;
+    position: relative;
+    display: inline-block;
+    margin: 0 0px;
+    padding: 0 15px;
+  }
+  #menu .nav ul li:hover > a {
+    background: rgba(0, 170, 0, 0.9);
+    color: #dcded6;
+  }
+  #menu .nav ul li:hover > .submenu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: inline;
+    visibility: visible;
+    color: #dcded6;
+    background: rgba(0, 145, 0, 0.9);
+  }
+  #menu .nav ul li a {
+    padding: 10px;
+  }
+  #menu .nav ul li .submenu {
+    display: none;
+    visibility: hidden;
+    z-index: 2;
+  }
+  #menu .nav ul li .sub3 {
+    position: absolute;
+    margin: -60px 0 0 90px;
+  }
+  /*menu*/
+}

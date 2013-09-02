@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+		<title></title>
+<style>
+/*
+Propiedad para manejar el tratado de espacios,
+tabulaciones y de saltos de lineas en contenido
+*/
+*{
+	margin:0;
+	padding:0;
+	border:0;
+}
+body{
+	font-family: 'Verdana', arial;
+	font-size: 20px;
+	font-style: italic;
+
+}
+div{
+	width: 300px;
+	height: auto;
+	background: rgba(230,230,230,.9);
+	color: #30312B;
+	margin: 10px;
+}
+	.pre_wrap{
+		white-space: pre-wrap;
+	}
+	.nowrap{
+		white-space: nowrap;/*no respeta saltos de linea ni tabulaciones*/
+	}
+	.pre{/*hace como si se tratara de la etiqeta <pre></pre> de html*/
+		white-space: pre;
+	}	
+</style>
+	<script></script>
+	<title>UNknown</title>
+	</head>
+	<body>
+		<div class="pre_wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum maxime aperiam sapiente beatae a nemo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, in.</div>
+		<div class="nowrap">
+							L    orem ipsum
+		 		dolor sit amet, consectetur
+		  adipisicing elit. Doloribus, in.
+		</div>
+		<div class="pre">
+			Lorem ipsum dolor sit amet, 
+					consectetur adipisicing elit.
+							 Doloribus, in.
+		</div>
+	</body>
+</html>

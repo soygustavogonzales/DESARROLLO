@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pictures>
+	<picture caption="Picture 1" source="../img/psj1.jpeg">
+	<picture caption="Picture 2" source="../img/psj2.jpeg">
+	<picture caption="Picture 3" source="../img/psj3.jpeg">
+	<picture caption="Picture 4" source="../img/psj4.jpeg">
+	<picture caption="Picture 5" source="../img/psj5.jpeg">
+</pictures>

@@ -1,0 +1,19 @@
+*{
+	word-wrap:break-word;
+}
+#web{
+	width:95%;
+	min-width: 320px;
+	margin: 0 auto;
+	background: #F3F2F1;
+}
+.colorNegro{
+	background: black;
+	color:white;
+}
+.colorRojo{
+	background: red;
+}
+.colorCyan{
+	background: cyan;
+}
